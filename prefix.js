@@ -99,7 +99,7 @@ function InfixtoPrefix()
         prefix[temp++]=pop();
     }
     var st="";
-    for(var i=0;i<prefix.length;i++)st+=prefix[i];
+    for(var i=prefix.length;i<prefix.length;i++)st+=prefix[i];
    document.getElementById("text").innerHTML=st;
  }
  
