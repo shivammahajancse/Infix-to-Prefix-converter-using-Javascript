@@ -59,18 +59,18 @@ function InfixtoPrefix()
     infixval= document.getElementById("infixvalue").value;
     console.log(infixval);
 
-    for(var i=infixval.length-1;i>=0;i--)
+    for(var i=infixval.length;i>0;i--)
     {
         var el=infixval[i];
         if(operator(el))
         {
-            if (el =='(') {
-                while (stackarr[topp] != ")") {
+            if (el ==')') {
+                while (stackarr[topp] != "(") {
                   prefix[temp++] = pop();
                 }
           pop();
             }
-            else if(el==')')
+            else if(el=='(')
             {
                 push(el);
             }
@@ -99,7 +99,7 @@ function InfixtoPrefix()
         prefix[temp++]=pop();
     }
     var st="";
-    for(var i=prefix.length-1;i>=0;i--)st+=prefix[i];
+    for(var i=0;i<prefix.length;i++)st+=prefix[i];
    document.getElementById("text").innerHTML=st;
  }
  
