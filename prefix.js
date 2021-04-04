@@ -51,9 +51,9 @@ function precedency(pre)
     return 0;
 }
 
-function InfixtoPostfix()
+function InfixtoPrefix()
 {
-    var postfix=[];
+    var prefix=[];
     var temp=0;
     push('@');
     infixval= document.getElementById("infixvalue").value;
@@ -66,7 +66,7 @@ function InfixtoPostfix()
         {
             if (el ==')') {
                 while (stackarr[topp] != "(") {
-                  postfix[temp++] = pop();
+                  prefix[temp++] = pop();
                 }
           pop();
             }
@@ -83,23 +83,23 @@ function InfixtoPostfix()
             {
                 while(precedency(el)<=precedency(stackarr[topp])&&topp>-1)
                 {
-                     postfix[temp++]=pop();
+                     prefix[temp++]=pop();
                 }
                 push(el);
             }
         }
         else{
-            postfix[temp++]=el;
+            prefix[temp++]=el;
         }
 
         
     }
     while(stackarr[topp]!='@')
     {
-        postfix[temp++]=pop();
+        prefix[temp++]=pop();
     }
     var st="";
-    for(var i=0;i<postfix.length;i++)st+=postfix[i];
+    for(var i=0;i<prefix.length;i++)st+=prefix[i];
    document.getElementById("text").innerHTML=st;
  }
  
