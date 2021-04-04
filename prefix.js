@@ -65,7 +65,7 @@ function InfixtoPrefix()
         if(operator(el))
         {
             if (el =='(') {
-                while (stackarr[topp] != "(") {
+                while (stackarr[topp] != ")") {
                   prefix[temp++] = pop();
                 }
           pop();
