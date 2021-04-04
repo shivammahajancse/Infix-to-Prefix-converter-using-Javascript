@@ -57,7 +57,7 @@ function InfixtoPrefix()
     var temp=0;
     push('@');
     infixval= document.getElementById("infixvalue").value;
-    console.log(infixval);
+   
 
     for(var i=infixval.length-1;i>=0;i--)
     {
