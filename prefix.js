@@ -59,7 +59,7 @@ function InfixtoPrefix()
     infixval= document.getElementById("infixvalue").value;
     console.log(infixval);
 
-    for(var i=infixval.length;i>=0;i++)
+    for(var i=infixval.length;i>=0;i--)
     {
         var el=infixval[i];
         if(operator(el))
