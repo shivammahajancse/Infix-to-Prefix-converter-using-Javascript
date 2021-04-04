@@ -64,7 +64,7 @@ function InfixtoPrefix()
         var el=infixval[i];
         if(operator(el))
         {
-            if (el ==')') {
+            if (el =='(') {
                 while (stackarr[topp] != "(") {
                   prefix[temp++] = pop();
                 }
