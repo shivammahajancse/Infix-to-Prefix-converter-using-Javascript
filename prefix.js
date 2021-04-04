@@ -70,7 +70,7 @@ function InfixtoPrefix()
                 }
           pop();
             }
-            else if(el=='(')
+            else if(el==')')
             {
                 push(el);
             }
